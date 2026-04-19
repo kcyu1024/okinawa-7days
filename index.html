@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#0b4c70">
+<title>🌺 沖繩 7天6夜 08/09–08/15</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ocean: #0b4c70;
+  --ocean-mid: #1779a8;
+  --ocean-light: #4db8e8;
+  --ocean-pale: #e6f5fb;
+  --sand: #fdf6e8;
+  --coral: #e86848;
+  --coral-light: #fdeee9;
+  --jade: #1fa870;
+  --jade-light: #d5f5e6;
+  --purple: #6b4eb8;
+  --purple-light: #eeebfa;
+  --amber: #d4820a;
+  --amber-light: #fef3dc;
+  --cool: #e0eff8;
+  --text: #18283a;
+  --muted: #526070;
+  --border: rgba(11,76,112,0.11);
+  --r: 16px;
+  --r-sm: 9px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Noto Sans TC',sans-serif;background:#f0f7fb;color:var(--text);min-height:100vh;padding-bottom:3rem;}
+
+/* HERO */
+.hero{background:linear-gradient(150deg,#062d48 0%,var(--ocean) 45%,var(--ocean-mid) 80%,#2c9dc8 100%);color:#fff;padding:2.2rem 1.25rem 2.8rem;position:relative;overflow:hidden;}
+.hero::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:36px;background:#f0f7fb;border-radius:60% 60% 0 0/36px 36px 0 0;}
+.wave-deco{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-size:2rem;opacity:.13;letter-spacing:.6rem;}
+.hero-top{display:flex;align-items:flex-start;gap:.9rem;margin-bottom:1.1rem;}
+.hero-icon{font-size:2.4rem;line-height:1;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:600;line-height:1.2;margin-bottom:.25rem;}
+.hero-dates{font-size:.8rem;opacity:.8;margin-bottom:.1rem;}
+.badge-row{display:flex;flex-wrap:wrap;gap:.5rem;}
+.hbadge{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);border-radius:20px;padding:.25rem .8rem;font-size:.75rem;font-weight:500;}
+
+/* NAV */
+.nav-wrap{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1.5px solid var(--border);box-shadow:0 1px 6px rgba(11,76,112,.07);}
+.day-nav{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.day-nav::-webkit-scrollbar{display:none;}
+.dnbtn{flex:none;padding:.8rem 1.05rem;font-size:.78rem;font-weight:500;color:var(--muted);background:none;border:none;cursor:pointer;border-bottom:2.5px solid transparent;white-space:nowrap;font-family:'Noto Sans TC',sans-serif;transition:color .18s,border-color .18s;}
+.dnbtn.active{color:var(--ocean);border-bottom-color:var(--ocean);font-weight:700;}
+
+/* MAIN */
+.main{padding:1.1rem 1rem;max-width:480px;margin:0 auto;}
+.day-section{display:none;}
+.day-section.active{display:block;}
+
+/* DAY HEADER CARD */
+.dhead{background:#fff;border-radius:var(--r);padding:.95rem 1.1rem;margin-bottom:.9rem;border:1px solid var(--border);box-shadow:0 3px 14px rgba(11,76,112,.08);display:flex;align-items:center;gap:.9rem;}
+.dnum{width:52px;height:52px;border-radius:50%;background:var(--ocean);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;}
+.dnum-label{font-size:.58rem;opacity:.8;text-transform:uppercase;letter-spacing:.05em;}
+.dnum-n{font-size:1.35rem;line-height:1.1;}
+.dhead-info h2{font-size:.95rem;font-weight:700;color:var(--ocean);line-height:1.3;}
+.dhead-info .dsub{font-size:.76rem;color:var(--muted);margin-top:3px;}
+.dhead-info .ddate{font-size:.72rem;color:var(--ocean-light);font-weight:600;margin-bottom:2px;}
+
+/* SECTION LABEL */
+.sec-label{font-size:.72rem;font-weight:700;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;padding:.6rem 0 .35rem .5rem;margin-top:.35rem;}
+
+/* TIMELINE */
+.timeline{position:relative;}
+.timeline::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--ocean-light) 0%,var(--border) 100%);border-radius:1px;}
+.ev{position:relative;padding-left:50px;margin-bottom:.85rem;}
+.dot{position:absolute;left:10px;top:13px;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.68rem;border:2.5px solid #f0f7fb;z-index:1;}
+.d-eat{background:var(--coral);}
+.d-see{background:var(--ocean-mid);}
+.d-play{background:var(--jade);}
+.d-hotel{background:var(--purple);}
+.d-move{background:#7a9db5;}
+.d-shop{background:var(--amber);}
+.d-cool{background:#2fa8c8;}
+
+/* CARD */
+.ecard{background:#fff;border-radius:var(--r);border:1px solid var(--border);box-shadow:0 2px 10px rgba(11,76,112,.06);overflow:hidden;}
+.etop{padding:.85rem 1rem .7rem;}
+.etime{font-size:.7rem;color:var(--muted);margin-bottom:.15rem;font-weight:500;}
+.etitle{font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:.25rem;line-height:1.3;}
+.edesc{font-size:.8rem;color:var(--muted);line-height:1.55;}
+.etags{display:flex;gap:.35rem;flex-wrap:wrap;padding:0 1rem .85rem;}
+.tag{font-size:.7rem;padding:.18rem .55rem;border-radius:20px;font-weight:500;}
+.t-eat{background:var(--coral-light);color:#b84020;}
+.t-see{background:var(--ocean-pale);color:var(--ocean);}
+.t-play{background:var(--jade-light);color:#14714a;}
+.t-cool{background:#daf3fb;color:#1479a0;}
+.t-shop{background:var(--amber-light);color:#8a5500;}
+.t-tip{background:#fef9e7;color:#7a6000;}
+.t-warn{background:#fff3f0;color:#b84020;}
+.maplink{display:flex;align-items:center;gap:.4rem;padding:.55rem 1rem;background:var(--ocean-pale);border-top:1px solid var(--border);font-size:.76rem;color:var(--ocean-mid);font-weight:500;text-decoration:none;}
+
+/* COOL BADGE */
+.cool-strip{background:linear-gradient(90deg,#daf3fb,#eaf8ff);border-top:1px solid #b3e4f5;padding:.4rem 1rem;display:flex;align-items:center;gap:.4rem;font-size:.73rem;color:#1479a0;font-weight:600;}
+
+/* OVERVIEW CARDS */
+.ov-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem;margin-bottom:.9rem;}
+.ov-card{background:#fff;border-radius:var(--r);border:1px solid var(--border);padding:.9rem;text-align:center;box-shadow:0 2px 10px rgba(11,76,112,.07);}
+.ov-icon{font-size:1.4rem;margin-bottom:.3rem;}
+.ov-val{font-size:1.15rem;font-weight:700;color:var(--ocean);}
+.ov-lab{font-size:.7rem;color:var(--muted);margin-top:2px;}
+
+.day-strip{background:#fff;border-radius:var(--r);border:1px solid var(--border);padding:.85rem 1rem;margin-bottom:.65rem;box-shadow:0 2px 8px rgba(11,76,112,.05);display:flex;gap:.85rem;align-items:flex-start;cursor:pointer;}
+.day-strip:active{opacity:.8;}
+.ds-num{width:38px;height:38px;border-radius:50%;background:var(--ocean);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0;}
+.ds-body{}
+.ds-title{font-size:.88rem;font-weight:700;color:var(--text);margin-bottom:2px;}
+.ds-date{font-size:.72rem;color:var(--ocean-light);font-weight:600;margin-bottom:2px;}
+.ds-spots{font-size:.76rem;color:var(--muted);line-height:1.45;}
+.ds-accent{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:4px;vertical-align:middle;}
+
+.tips-box{background:#fff;border-radius:var(--r);border:1px solid var(--border);padding:.95rem 1.1rem;margin-top:1rem;box-shadow:0 2px 10px rgba(11,76,112,.07);}
+.tips-box h3{font-size:.82rem;color:var(--ocean);font-weight:700;margin-bottom:.7rem;display:flex;align-items:center;gap:.35rem;}
+.tip-item{font-size:.8rem;color:var(--muted);padding:.42rem 0;border-bottom:1px solid var(--border);display:flex;gap:.5rem;line-height:1.45;}
+.tip-item:last-child{border-bottom:none;}
+
+footer{text-align:center;padding:1.4rem 1rem .5rem;font-size:.73rem;color:var(--muted);}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-top">
+    <div class="hero-icon">🌺</div>
+    <div>
+      <h1>沖繩 7天6夜</h1>
+      <div class="hero-dates">08/09（日）→ 08/15（六）· 2025</div>
+    </div>
+  </div>
+  <div class="badge-row">
+    <span class="hbadge">✈ 那霸進出</span>
+    <span class="hbadge">🚗 Day2起自駕</span>
+    <span class="hbadge">🏖 7天6夜</span>
+    <span class="hbadge">❄️ 避暑計畫</span>
+  </div>
+  <div class="wave-deco">〰〰〰〰</div>
+</div>
+
+<nav class="nav-wrap">
+  <div class="day-nav">
+    <button class="dnbtn active" onclick="showDay(0)">總覽</button>
+    <button class="dnbtn" onclick="showDay(1)">Day 1<br><span style="font-size:.65rem;opacity:.7;">08/09</span></button>
+    <button class="dnbtn" onclick="showDay(2)">Day 2<br><span style="font-size:.65rem;opacity:.7;">08/10</span></button>
+    <button class="dnbtn" onclick="showDay(3)">Day 3<br><span style="font-size:.65rem;opacity:.7;">08/11</span></button>
+    <button class="dnbtn" onclick="showDay(4)">Day 4<br><span style="font-size:.65rem;opacity:.7;">08/12</span></button>
+    <button class="dnbtn" onclick="showDay(5)">Day 5<br><span style="font-size:.65rem;opacity:.7;">08/13</span></button>
+    <button class="dnbtn" onclick="showDay(6)">Day 6<br><span style="font-size:.65rem;opacity:.7;">08/14</span></button>
+    <button class="dnbtn" onclick="showDay(7)">Day 7<br><span style="font-size:.65rem;opacity:.7;">08/15</span></button>
+  </div>
+</nav>
+
+<div class="main">
+
+<!-- ===== OVERVIEW ===== -->
+<div class="day-section active" id="day-0">
+  <div class="ov-grid">
+    <div class="ov-card"><div class="ov-icon">📅</div><div class="ov-val">7天</div><div class="ov-lab">旅程天數</div></div>
+    <div class="ov-card"><div class="ov-icon">📍</div><div class="ov-val">20+</div><div class="ov-lab">景點美食</div></div>
+    <div class="ov-card"><div class="ov-icon">🚗</div><div class="ov-val">6天</div><div class="ov-lab">自駕天數</div></div>
+    <div class="ov-card"><div class="ov-icon">❄️</div><div class="ov-val">7處</div><div class="ov-lab">避暑景點</div></div>
+  </div>
+
+  <div class="day-strip" onclick="showDay(1)">
+    <div class="ds-num">1</div>
+    <div class="ds-body">
+      <div class="ds-date">08/09 週日</div>
+      <div class="ds-title">抵達那霸 · 國際通初夜</div>
+      <div class="ds-spots">✈ 那霸機場 → 單軌電車 → 國際通宵夜散步</div>
+    </div>
+  </div>
+  <div class="day-strip" onclick="showDay(2)">
+    <div class="ds-num" style="background:var(--jade);">2</div>
+    <div class="ds-body">
+      <div class="ds-date">08/10 週一</div>
+      <div class="ds-title">南部聖地 · 自駕開始</div>
+      <div class="ds-spots">⛩ 齋場御嶽 · 知念岬 · ❄️玉泉洞 · 奧武島 · 瀨長島</div>
+    </div>
+  </div>
+  <div class="day-strip" onclick="showDay(3)">
+    <div class="ds-num" style="background:var(--coral);">3</div>
+    <div class="ds-body">
+      <div class="ds-date">08/11 週二</div>
+      <div class="ds-title">東海岸絕景 · 美國村夜景</div>
+      <div class="ds-spots">🏰 勝連城跡 · 海中道路 · ❄️PARCO CITY · 美國村日落</div>
+    </div>
+  </div>
+  <div class="day-strip" onclick="showDay(4)">
+    <div class="ds-num" style="background:var(--purple);">4</div>
+    <div class="ds-body">
+      <div class="ds-date">08/12 週三</div>
+      <div class="ds-title">西海岸打卡 · 大採買</div>
+      <div class="ds-spots">🐘 萬座毛 · 青之洞窟 · ❄️來客夢 · 殘波岬燈塔</div>
+    </div>
+  </div>
+  <div class="day-strip" onclick="showDay(5)">
+    <div class="ds-num" style="background:var(--ocean-mid);">5</div>
+    <div class="ds-body">
+      <div class="ds-date">08/13 週四 · 連假開始</div>
+      <div class="ds-title">古宇利藍 · 美麗海水族館</div>
+      <div class="ds-spots">🌉 古宇利大橋 · 心形岩 · ❄️水族館 · 備瀨福木 · 海豚表演</div>
+    </div>
+  </div>
+  <div class="day-strip" onclick="showDay(6)">
+    <div class="ds-num" style="background:var(--amber);">6</div>
+    <div class="ds-body">
+      <div class="ds-date">08/14 週五</div>
+      <div class="ds-title">Outlet掃貨 · 那霸收尾</div>
+      <div class="ds-spots">🏯 今歸仁城跡 · ❄️ASHIBINAA · 波上宮 · 牧志市場</div>
+    </div>
+  </div>
+  <div class="day-strip" onclick="showDay(7)">
+    <div class="ds-num" style="background:var(--muted);">7</div>
+    <div class="ds-body">
+      <div class="ds-date">08/15 週六</div>
+      <div class="ds-title">返台 · 帶著滿滿戰利品</div>
+      <div class="ds-spots">✈ 退房 → 那霸機場 → 返台</div>
+    </div>
+  </div>
+
+  <div class="tips-box">
+    <h3>❄️ 八月避暑攻略</h3>
+    <div class="tip-item"><span>🌡</span><span>沖繩八月均溫 32°C、體感 38°C+，安排午間進入室內景點是關鍵</span></div>
+    <div class="tip-item"><span>⛰</span><span>齋場御嶽多樹蔭、玉泉洞恆溫 21°C、水族館整天涼爽，為最佳避暑點</span></div>
+    <div class="tip-item"><span>🕗</span><span>外景點安排早上 9 點前或傍晚 4 點後，正午 11–15 時躲入室內</span></div>
+    <div class="tip-item"><span>💧</span><span>每人每天至少準備 1.5L 飲水，帽子＋SPF50+ 防曬必備</span></div>
+    <div class="tip-item"><span>🎌</span><span>08/13–15 為日本盂蘭盆節連假，美麗海水族館等熱門景點人潮倍增，建議一早出發</span></div>
+  </div>
+</div>
+
+<!-- ===== DAY 1 ===== -->
+<div class="day-section" id="day-1">
+  <div class="dhead">
+    <div class="dnum"><div class="dnum-label">DAY</div><div class="dnum-n">1</div></div>
+    <div class="dhead-info">
+      <div class="ddate">08/09（週日）</div>
+      <h2>抵達那霸 · 國際通初夜</h2>
+      <div class="dsub">單軌電車 · 國際通散步宵夜</div>
+    </div>
+  </div>
+  <div class="timeline">
+
+    <div class="ev">
+      <div class="dot d-move">✈</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">晚間 · 抵達</div>
+          <div class="etitle">那霸機場入境</div>
+          <div class="edesc">入境辦理後，前往單軌電車「那霸空港站」。搭乘ゆいレール往市區，至「牧志站」或「縣廳前站」下車，步行至飯店。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-tip">💡 車資約 ¥370 · 約 15 分</span>
+          <span class="tag t-tip">🧳 大行李先寄放飯店</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=那覇空港駅" target="_blank">📍 那霸空港站地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-see">🛍</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">晚間 · 散步</div>
+          <div class="etitle">國際通夜間散步</div>
+          <div class="edesc">那霸最熱鬧的購物街，全長約 1.6 km，伴手禮店、居酒屋、工藝品店林立。初次到訪先感受沖繩氣氛，明確採購留回程。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-see">🛍 購物街</span>
+          <span class="tag t-tip">💡 週六行人徒步區（本次不適用）</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=国際通り+那覇" target="_blank">📍 國際通地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-eat">🍜</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">宵夜</div>
+          <div class="etitle">國際通宵夜</div>
+          <div class="edesc">推薦初夜嘗試「沖繩そば（沖繩麵）」或「ゴーヤチャンプルー（苦瓜炒蛋）」，配上 Orion 生啤酒，感受第一晚的沖繩味道。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-eat">🍻 沖繩料理</span>
+          <span class="tag t-eat">🍺 Orion 生啤</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-hotel">🏨</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">住宿</div>
+          <div class="etitle">那霸市區飯店</div>
+          <div class="edesc">建議選在國際通或牧志站附近，明日需前往市區租車店取車，住宿位置很重要。</div>
+        </div>
+        <div class="etags"><span class="tag" style="background:var(--purple-light);color:var(--purple);">🏨 那霸市區</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== DAY 2 ===== -->
+<div class="day-section" id="day-2">
+  <div class="dhead">
+    <div class="dnum" style="background:var(--jade);"><div class="dnum-label">DAY</div><div class="dnum-n">2</div></div>
+    <div class="dhead-info">
+      <div class="ddate">08/10（週一）· 自駕開始</div>
+      <h2>南部聖地 · 神聖與涼爽</h2>
+      <div class="dsub">齋場御嶽 · 玉泉洞 · 瀨長島</div>
+    </div>
+  </div>
+  <div class="timeline">
+
+    <div class="ev">
+      <div class="dot d-move">🚗</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">上午 09:00</div>
+          <div class="etitle">那霸市區租車店取車</div>
+          <div class="edesc">前往市區指定租車店辦理手續取車。建議提前準備「國際駕照」＋「台灣駕照」，確認車輛保險與 ETC 卡。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-tip">💡 需台灣駕照＋國際駕照</span>
+          <span class="tag t-tip">🛣 ETC 卡建議租借</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-see">⛩</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">上午 10:00</div>
+          <div class="etitle">齋場御嶽</div>
+          <div class="edesc">琉球王國第一聖地，世界遺產。茂密的原始森林中有神秘的三角岩縫「三庫理」，氣氛肅靜莊嚴。此處多為樹蔭，比其他景點涼爽。需先至南城市文化商業中心購票。</div>
+        </div>
+        <div class="cool-strip">❄️ 多樹蔭，相對涼爽</div>
+        <div class="etags">
+          <span class="tag t-see">⛩ 世界遺產</span>
+          <span class="tag t-tip">💡 票 ¥300 · 需提前取票</span>
+          <span class="tag t-tip">⏱ 約 60 分</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=斎場御嶽" target="_blank">📍 齋場御嶽地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-see">🌊</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">上午 11:30</div>
+          <div class="etitle">知念岬公園</div>
+          <div class="edesc">就在齋場御嶽旁，步行或短暫開車可達。三面環海的展望台，晴天可遠眺久高島（琉球神話中的神之島）。太平洋的深藍配上青翠海岸，令人震撼。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-see">🔭 展望絕景</span>
+          <span class="tag t-tip">💡 免費 · 建議早上光線最美</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=知念岬公園" target="_blank">📍 知念岬地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-cool">❄️</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">下午 13:30</div>
+          <div class="etitle">沖繩世界文化王國 · 玉泉洞</div>
+          <div class="edesc">地底鐘乳石洞全年恆溫 21°C，是八月最強避暑選擇。洞內全長 890 m，歷時 30 萬年形成，30 萬根石筍如夢似幻。外部有琉球村文化體驗、泡盛酒廠等。</div>
+        </div>
+        <div class="cool-strip">❄️ 地底恆溫 21°C · 正午最佳避暑點</div>
+        <div class="etags">
+          <span class="tag t-cool">❄️ 室內避暑</span>
+          <span class="tag t-tip">💡 票 ¥2,000 · 約 90 分</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=おきなわワールド文化王国·玉泉洞" target="_blank">📍 玉泉洞地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-eat">🍤</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">下午 15:30</div>
+          <div class="etitle">奧武島 · 名產天婦羅</div>
+          <div class="edesc">小島上有知名的「中本鮮魚てんぷら店」，現炸天婦羅一個 ¥80 起，蝦、魚、もずく（水雲）最受歡迎。買完回車上吹冷氣享用，避開日曬！</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-eat">🍤 炸天婦羅名產</span>
+          <span class="tag t-tip">💡 回車上吹冷氣吃！</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=奥武島+中本鮮魚てんぷら店" target="_blank">📍 奧武島地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-see">🛫</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">傍晚 17:30</div>
+          <div class="etitle">瀨長島 Umikaji Terrace</div>
+          <div class="edesc">白色地中海風格建築群，緊鄰那霸機場跑道旁，可近距離目送飛機起降。傍晚夕陽西下時橙紅光芒灑在海面，是沖繩最熱門的打卡日落點。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-see">🌅 日落打卡</span>
+          <span class="tag t-see">✈ 看飛機起降</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=瀬長島ウミカジテラス" target="_blank">📍 瀨長島地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-eat">🍲</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">晚餐 19:30</div>
+          <div class="etitle">琉球島豚 Agu 豬火鍋</div>
+          <div class="edesc">沖繩品牌豬「Agu 豬（アグー豬）」油脂豐富甜美，火鍋或涮涮鍋都極為美味。推薦那霸市區的 Agu 豬專門店，需提前預訂。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-eat">🍲 Agu 豬火鍋</span>
+          <span class="tag t-warn">⚠️ 建議提前預訂</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-hotel">🏨</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">住宿</div>
+          <div class="etitle">那霸市區 or 南部飯店</div>
+          <div class="edesc">可繼續住那霸，或移往南城市附近，明日往中部出發。</div>
+        </div>
+        <div class="etags"><span class="tag" style="background:var(--purple-light);color:var(--purple);">🏨 那霸 / 南部</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== DAY 3 ===== -->
+<div class="day-section" id="day-3">
+  <div class="dhead">
+    <div class="dnum" style="background:var(--coral);"><div class="dnum-label">DAY</div><div class="dnum-n">3</div></div>
+    <div class="dhead-info">
+      <div class="ddate">08/11（週二）</div>
+      <h2>東海岸絕景 · 美國村夜景</h2>
+      <div class="dsub">勝連城跡 · 海中道路 · 美國村日落</div>
+    </div>
+  </div>
+  <div class="timeline">
+
+    <div class="ev">
+      <div class="dot d-see">🏰</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">上午 09:00</div>
+          <div class="etitle">勝連城跡</div>
+          <div class="edesc">建立於 13–15 世紀的世界遺產城跡，石牆壯觀宏偉。登上最高處可俯瞰金武灣與周邊海島，視野遼闊。建議早上前往，避開正午烈日。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-see">🏰 世界遺產</span>
+          <span class="tag t-tip">💡 票 ¥600 · 約 45 分</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=勝連城跡" target="_blank">📍 勝連城跡地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-see">🌊</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">上午 10:30</div>
+          <div class="etitle">海中道路</div>
+          <div class="edesc">全長 4.7 km 的跨海公路，連接本島至浜比嘉島。兩側是淺藍色潟湖，退潮時可見大片沙灘與潮間帶。開車穿越時有種在海上飛翔的錯覺。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-see">🌊 跨海公路</span>
+          <span class="tag t-tip">💡 免費通行</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=海中道路" target="_blank">📍 海中道路地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-cool">🛍</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">下午 12:30</div>
+          <div class="etitle">PARCO CITY 北谷 · 午間避暑</div>
+          <div class="edesc">美國村旁的大型購物中心，冷氣強勁，有食堂街可用餐午休。正午 12–15 時躲入室內是最佳策略，順便逛街購物。</div>
+        </div>
+        <div class="cool-strip">❄️ 室內商場 · 正午避暑最佳</div>
+        <div class="etags">
+          <span class="tag t-cool">❄️ 室內避暑</span>
+          <span class="tag t-shop">🛍 購物</span>
+          <span class="tag t-eat">🍽 美食街午餐</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=PARCO CITY 北谷" target="_blank">📍 PARCO CITY 地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-play">🌳</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">下午 16:00</div>
+          <div class="etitle">浦添大公園 · 溜滑梯挑戰</div>
+          <div class="edesc">建議 16 時後前往，陽光較弱。公園內有全沖繩最長的兒童溜滑梯，大人小孩都玩得不亦樂乎！入場免費，是個輕鬆的傍晚活動。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-play">🎢 大型溜滑梯</span>
+          <span class="tag t-tip">💡 免費入場 · 16 時後最涼</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=浦添大公園" target="_blank">📍 浦添大公園地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-see">🌅</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">傍晚 18:00</div>
+          <div class="etitle">美浜美國村 · 日落與夜景</div>
+          <div class="edesc">以美式文化為主題，有彩色摩天輪、特色餐廳、古著店。傍晚夕陽倒映在海灣，入夜後霓虹燈光燦爛，是沖繩最浪漫的夜景之一。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-see">🌅 日落夜景</span>
+          <span class="tag t-see">🎡 摩天輪</span>
+          <span class="tag t-shop">🛍 特色商店</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=美浜アメリカンビレッジ" target="_blank">📍 美國村地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-eat">🍔</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">晚餐 19:30</div>
+          <div class="etitle">美國村特色餐廳</div>
+          <div class="edesc">美國村內餐廳種類豐富，從美式漢堡、墨西哥菜到日式料理都有。推薦「Depot Road」或「Nirai Beach」海景餐廳，享受夜風海景。</div>
+        </div>
+        <div class="etags"><span class="tag t-eat">🍽 特色餐廳</span></div>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-hotel">🏨</div>
+      <div class="ecard">
+        <div class="etop"><div class="etime">住宿</div><div class="etitle">北谷 / 恩納村飯店</div><div class="edesc">住在中部，明日往西海岸景點出發方便。</div></div>
+        <div class="etags"><span class="tag" style="background:var(--purple-light);color:var(--purple);">🏨 北谷 / 恩納</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== DAY 4 ===== -->
+<div class="day-section" id="day-4">
+  <div class="dhead">
+    <div class="dnum" style="background:var(--purple);"><div class="dnum-label">DAY</div><div class="dnum-n">4</div></div>
+    <div class="dhead-info">
+      <div class="ddate">08/12（週三）</div>
+      <h2>西海岸打卡 · 最強購物</h2>
+      <div class="dsub">萬座毛 · 青之洞窟 · 來客夢 · 殘波岬</div>
+    </div>
+  </div>
+  <div class="timeline">
+
+    <div class="ev">
+      <div class="dot d-see">🐘</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">清晨 08:00</div>
+          <div class="etitle">萬座毛 · 象鼻岩</div>
+          <div class="edesc">狀似大象的奇特海蝕岩景觀，晨光下格外壯麗。新設付費展望台（¥100），有整備良好的步道環繞珊瑚礁海岸。清晨人少、光線美，建議最先到訪。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-see">🐘 象鼻岩</span>
+          <span class="tag t-tip">💡 ¥100 展望台 · 清晨最美</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=万座毛" target="_blank">📍 萬座毛地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-see">🌀</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">上午 09:30</div>
+          <div class="etitle">真榮田岬 · 青之洞窟展望台</div>
+          <div class="edesc">沖繩最知名的潛水景點「青之洞窟」入口處，即使不下水，站在岬角展望台也能欣賞到湛藍海灣絕景。可俯瞰珊瑚礁與潛水客，非常壯觀。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-see">🌀 青之洞窟</span>
+          <span class="tag t-play">🤿 浮潛可選報名</span>
+          <span class="tag t-tip">💡 展望台免費</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=真栄田岬" target="_blank">📍 真榮田岬地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-cool">🛒</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">下午 12:00</div>
+          <div class="etitle">永旺夢樂城來客夢 · 午間大採買</div>
+          <div class="edesc">沖繩最大型購物中心，冷氣完善，三層樓涵蓋超市、藥妝、服飾、餐廳。正午最熱時段最適合在此採購伴手禮、藥妝與日常用品，同時午餐。</div>
+        </div>
+        <div class="cool-strip">❄️ 大型室內商場 · 正午避暑採購</div>
+        <div class="etags">
+          <span class="tag t-cool">❄️ 室內避暑</span>
+          <span class="tag t-shop">🛒 伴手禮採買</span>
+          <span class="tag t-shop">💊 藥妝</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=イオンモール沖縄ライカム" target="_blank">📍 來客夢地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-see">🏛</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">下午 16:00</div>
+          <div class="etitle">殘波岬燈塔</div>
+          <div class="edesc">白色燈塔矗立在壯闊的珊瑚礁斷崖海岸，海浪拍打礁岩氣勢磅礡。可攀登燈塔頂部（¥300）俯瞰東海全景，4 點後光線柔美，最適合拍照。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-see">🌊 斷崖絕景</span>
+          <span class="tag t-tip">💡 燈塔登頂 ¥300 · 16 時後最涼</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=残波岬灯台" target="_blank">📍 殘波岬地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-eat">🥩</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">晚餐 19:00</div>
+          <div class="etitle">名護 · 琉球之牛 高級燒肉</div>
+          <div class="edesc">「琉球の牛」提供沖繩縣產和牛燒肉，肉質細嫩油花豐富，是此行最值得犒賞自己的一餐。位於名護市，移往北部途中前往，強烈建議提前預約。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-eat">🥩 沖繩和牛燒肉</span>
+          <span class="tag t-warn">⚠️ 提前預訂必須</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-hotel">🏨</div>
+      <div class="ecard">
+        <div class="etop"><div class="etime">住宿</div><div class="etitle">名護市 / 本部町飯店</div><div class="edesc">北上住在名護或本部，明日可最快抵達古宇利島與美麗海水族館。</div></div>
+        <div class="etags"><span class="tag" style="background:var(--purple-light);color:var(--purple);">🏨 名護 / 本部</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== DAY 5 ===== -->
+<div class="day-section" id="day-5">
+  <div class="dhead">
+    <div class="dnum" style="background:var(--ocean-mid);"><div class="dnum-label">DAY</div><div class="dnum-n">5</div></div>
+    <div class="dhead-info">
+      <div class="ddate">08/13（週四）· 🎌 連假開始</div>
+      <h2>古宇利藍 · 美麗海水族館</h2>
+      <div class="dsub">古宇利島 · 心形岩 · 備瀨福木 · 海豚</div>
+    </div>
+  </div>
+
+  <div class="tips-box" style="margin-bottom:.9rem;border-left:4px solid var(--coral);">
+    <h3 style="color:var(--coral);">⚠️ 連假注意事項</h3>
+    <div class="tip-item"><span>🎌</span><span>08/13–15 盂蘭盆節連假，美麗海水族館、古宇利島人潮倍增</span></div>
+    <div class="tip-item"><span>⏰</span><span>建議各景點比平日提早 30–60 分到達，停車場提早額滿</span></div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="ev">
+      <div class="dot d-see">🌉</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">早上 08:30</div>
+          <div class="etitle">古宇利大橋 · 古宇利島</div>
+          <div class="edesc">全長 1,960 m 的跨海大橋，駕車越橋時兩側是透明湛藍的海水，令人屏息。連假人潮多，建議一早前往，停車場較空。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-see">💙 最美跨海大橋</span>
+          <span class="tag t-tip">💡 免費通行</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=古宇利大橋" target="_blank">📍 古宇利大橋地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-see">💕</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">早上 09:00</div>
+          <div class="etitle">心形岩（ハートロック）</div>
+          <div class="edesc">古宇利島北端的知名打卡點，兩塊天然礁岩形成心形，背後是蔚藍大海。從停車場步行約 10–15 分可達，沙灘上的紀念品攤也值得逛逛。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-see">💕 打卡必去</span>
+          <span class="tag t-tip">💡 步行 10–15 分</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=ハートロック+古宇利島" target="_blank">📍 心形岩地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-cool">🗼</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">上午 10:00</div>
+          <div class="etitle">古宇利海洋塔</div>
+          <div class="edesc">高 82 m 的觀景塔，塔頂 360° 俯瞰古宇利島與周邊海景，視野絕佳。塔內有貝殼博物館，空調涼爽，正好在前往水族館前避暑休息。</div>
+        </div>
+        <div class="cool-strip">❄️ 室內貝殼博物館 · 吹冷氣看海景</div>
+        <div class="etags">
+          <span class="tag t-cool">❄️ 室內展覽</span>
+          <span class="tag t-see">🗼 360° 展望台</span>
+          <span class="tag t-tip">💡 票 ¥800</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=古宇利オーシャンタワー" target="_blank">📍 古宇利海洋塔地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-eat">🍤</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">午餐 12:00</div>
+          <div class="etitle">蝦蝦飯（えびそば一幻 or 海老屋）</div>
+          <div class="edesc">本部町一帶有數家知名蝦蝦飯店，使用新鮮沖繩車蝦現烤，蝦膏飯香味十足。是北部最受歡迎的午餐選項，連假期間建議早點用餐避開人潮。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-eat">🦐 蝦蝦飯</span>
+          <span class="tag t-tip">💡 建議 11:30 前到</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-cool">🐳</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">下午 13:30</div>
+          <div class="etitle">沖繩美麗海水族館</div>
+          <div class="edesc">世界最大水族箱之一，黑潮之海展廳可同時看到鯨鯊與蝠鱝同游，震撼無比。冷氣舒適，可在此度過整個下午最炎熱時段。連假人多，建議準時開門進場。</div>
+        </div>
+        <div class="cool-strip">❄️ 避暑首選 · 在此度過午後最熱時段</div>
+        <div class="etags">
+          <span class="tag t-cool">❄️ 全日室內</span>
+          <span class="tag t-see">🦈 鯨鯊必看</span>
+          <span class="tag t-tip">💡 票 ¥2,180（16 時後 ¥1,630）</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=沖縄美ら海水族館" target="_blank">📍 美麗海水族館地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-see">🌳</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">下午 16:00</div>
+          <div class="etitle">備瀨福木林道</div>
+          <div class="edesc">約 800 棵福木樹構成的綠色隧道，租借腳踏車穿越林蔭小道極為夢幻，是沖繩最獨特的體驗之一。林道盡頭是靜謐的海邊，傍晚光線最美。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-see">🌳 綠色隧道</span>
+          <span class="tag t-play">🚲 腳踏車租借</span>
+          <span class="tag t-tip">💡 免費入場</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=備瀬のフクギ並木" target="_blank">📍 備瀨福木地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-play">🐬</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">傍晚 17:00</div>
+          <div class="etitle">海洋博公園 · 海豚表演（17:00 場）</div>
+          <div class="edesc">海洋博公園內的海豚劇場，免費入場！17:00 場是最後一場，演出約 20 分鐘，有趣又感動。海豚的高超跳躍表演非常精彩，適合大小朋友。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-play">🐬 海豚表演</span>
+          <span class="tag t-tip">💡 免費 · 17:00 最後場</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=海洋博公園イルカショー" target="_blank">📍 海豚劇場地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-eat">🏠</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">晚餐 19:00</div>
+          <div class="etitle">百年古家 大家（うふやー）</div>
+          <div class="edesc">百年歷史的琉球古民家改建餐廳，環境絕美、氣氛獨特。供應沖繩傳統鄉土料理與琉球套餐，是沖繩最具特色的用餐體驗之一。此行最重要晚餐，提前預訂必須。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-eat">🏮 百年古家</span>
+          <span class="tag t-warn">⚠️ 提前預訂必須</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-hotel">🏨</div>
+      <div class="ecard">
+        <div class="etop"><div class="etime">住宿</div><div class="etitle">名護市 / 本部町飯店</div><div class="edesc">繼續住北部，明日往今歸仁城跡出發方便。</div></div>
+        <div class="etags"><span class="tag" style="background:var(--purple-light);color:var(--purple);">🏨 名護 / 本部</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== DAY 6 ===== -->
+<div class="day-section" id="day-6">
+  <div class="dhead">
+    <div class="dnum" style="background:var(--amber);"><div class="dnum-label">DAY</div><div class="dnum-n">6</div></div>
+    <div class="dhead-info">
+      <div class="ddate">08/14（週五）· 🎌 連假中</div>
+      <h2>Outlet 掃貨 · 那霸收尾</h2>
+      <div class="dsub">今歸仁城 · ASHIBINAA · 波上宮 · 牧志</div>
+    </div>
+  </div>
+  <div class="timeline">
+
+    <div class="ev">
+      <div class="dot d-see">🏯</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">早上 09:00</div>
+          <div class="etitle">今歸仁城跡</div>
+          <div class="edesc">北山王國時代的古城跡，世界遺產，規模僅次於首里城。城牆依山而建極為壯觀，春天（1月）盛開寒緋櫻，夏季則有清晨涼風。石牆上的景色與大海相映，值得一訪。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-see">🏯 世界遺產</span>
+          <span class="tag t-tip">💡 票 ¥600 · 約 40 分</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=今帰仁城跡" target="_blank">📍 今歸仁城跡地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-eat">🍩</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">上午 10:30</div>
+          <div class="etitle">道之驛許田 · 炸甜甜圈</div>
+          <div class="edesc">名護往南的知名休息站，沖繩特色甜點「サーターアンダギー（沙糖天婦羅）」就是在地版甜甜圈，外酥內軟現炸超香，是沖繩必吃小吃之一。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-eat">🍩 沙糖天婦羅</span>
+          <span class="tag t-tip">💡 現炸現吃最美味</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=道の駅許田" target="_blank">📍 道之驛許田地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-cool">🛍</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">下午 12:30</div>
+          <div class="etitle">ASHIBINAA Outlet · iias 沖繩豐崎</div>
+          <div class="edesc">兩大購物中心位於那霸南部，可一次完成所有購物。ASHIBINAA 是正規 Outlet，Coach、Ralph Lauren 等品牌齊全；iias 豐崎有大型超市與美食廣場，正午在此避暑採買最完美。</div>
+        </div>
+        <div class="cool-strip">❄️ 室內 Outlet · 連假最佳避暑購物</div>
+        <div class="etags">
+          <span class="tag t-cool">❄️ 室內避暑</span>
+          <span class="tag t-shop">🛍 Outlet 名牌</span>
+          <span class="tag t-shop">🛒 iias 超市</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=アウトレットモールあしびなー" target="_blank">📍 ASHIBINAA 地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-see">⛩</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">傍晚 17:30</div>
+          <div class="etitle">波上宮 · 夕陽參拜</div>
+          <div class="edesc">沖繩最古老、地位最高的神社，矗立在珊瑚礁斷崖上，下方是波之上海灘。夕陽時分橙紅光芒灑落，氣氛莊嚴又浪漫。那霸市中心徒步可達。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-see">⛩ 最古老神社</span>
+          <span class="tag t-tip">💡 免費 · 夕陽參拜最美</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=波上宮" target="_blank">📍 波上宮地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-move">🚗</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">傍晚 18:30</div>
+          <div class="etitle">那霸市區還車</div>
+          <div class="edesc">前往那霸市區租車店辦理還車。確認車輛無損、歸還 ETC 卡、加滿油（確認是否需要自行加油）。還車後轉搭單軌電車或步行至晚餐地點。</div>
+        </div>
+        <div class="etags"><span class="tag t-tip">💡 確認加油需求與 ETC 歸還</span></div>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-eat">🦐</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">晚餐 19:30</div>
+          <div class="etitle">第一牧志公設市場 or 國際通居酒屋</div>
+          <div class="edesc">牧志市場 1 樓選購新鮮魚貨，2 樓請店家代為烹調，豪華又實惠。或選擇國際通居酒屋，來一頓充滿沖繩風味的最後晚宴，喝一杯泡盛道別。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-eat">🦐 牧志市場</span>
+          <span class="tag t-eat">🍻 居酒屋</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=第一牧志公設市場" target="_blank">📍 牧志市場地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-hotel">🏨</div>
+      <div class="ecard">
+        <div class="etop"><div class="etime">住宿</div><div class="etitle">那霸市區飯店（最後一晚）</div><div class="edesc">明日早起退房，建議選擇機場附近或單軌沿線飯店，出發最方便。</div></div>
+        <div class="etags"><span class="tag" style="background:var(--purple-light);color:var(--purple);">🏨 那霸 · 最後一晚</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== DAY 7 ===== -->
+<div class="day-section" id="day-7">
+  <div class="dhead">
+    <div class="dnum" style="background:var(--muted);"><div class="dnum-label">DAY</div><div class="dnum-n">7</div></div>
+    <div class="dhead-info">
+      <div class="ddate">08/15（週六）· 🎌 連假最後日</div>
+      <h2>返台 · 滿載而歸</h2>
+      <div class="dsub">退房 → 那霸空港 → 台灣</div>
+    </div>
+  </div>
+  <div class="timeline">
+
+    <div class="ev">
+      <div class="dot d-move">🏨</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">早晨</div>
+          <div class="etitle">飯店退房 · 行李整理</div>
+          <div class="edesc">退房前確認所有行李，將易碎的琉球玻璃、泡盛用衣物包好。若行李超重，可在全家 / 7-11 使用宅急便（ヤマト運輸）直接寄回台灣。</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-tip">💡 宅急便可寄回台灣</span>
+          <span class="tag t-tip">🧳 玻璃工藝品用衣物包好</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-shop">🛍</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">機場免稅店</div>
+          <div class="etitle">那霸機場 · 最後採購</div>
+          <div class="edesc">那霸機場免稅店有豐富的沖繩限定商品，與市區同價不用擔心貴。還可以在候機時享用最後一碗沖繩麵！</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-shop">🛍 免稅店</span>
+          <span class="tag t-eat">🍜 最後沖繩麵</span>
+        </div>
+        <a class="maplink" href="https://maps.google.com/?q=那覇空港" target="_blank">📍 那霸空港地圖</a>
+      </div>
+    </div>
+
+    <div class="ev">
+      <div class="dot d-move">✈</div>
+      <div class="ecard">
+        <div class="etop">
+          <div class="etime">啟程返台</div>
+          <div class="etitle">那霸 → 台灣 · 旅程圓滿</div>
+          <div class="edesc">連假最後一天機位緊張，建議起飛前 2.5–3 小時抵達機場辦理報到。帶著滿滿的回憶與戰利品，期待下次再訪沖繩！</div>
+        </div>
+        <div class="etags">
+          <span class="tag t-warn">⚠️ 連假末班人潮多 · 提早到機場</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tips-box">
+    <h3>🎁 必買伴手禮清單</h3>
+    <div class="tip-item"><span>🍬</span><span>雪塩ちんすこう（雪塩千層酥）— 宮古島海鹽版，甜鹹平衡絕妙</span></div>
+    <div class="tip-item"><span>🍫</span><span>石垣黑糖巧克力 / 黑糖飴 — 有機黑糖製，送禮最佳</span></div>
+    <div class="tip-item"><span>🥃</span><span>泡盛（AWAMORI）— 沖繩蒸餾酒，古酒越陳越香，機場免稅可買</span></div>
+    <div class="tip-item"><span>🌺</span><span>琉球玻璃製品 — 手工吹製、色彩繽紛，牧志市場周邊工藝店</span></div>
+    <div class="tip-item"><span>🧴</span><span>日本防曬美妝 — ANESSA / BIORE 防曬比台灣便宜許多</span></div>
+    <div class="tip-item"><span>🐾</span><span>シーサー（石獅）擺件 — 沖繩守護神，各尺寸都有，選個喜歡的帶回家</span></div>
+  </div>
+</div>
+
+</div><!-- end .main -->
+
+<footer>🌺 沖繩 7天6夜 · 08/09–08/15, 2025 · 祝旅途平安愉快！</footer>
+
+<script>
+const sections = document.querySelectorAll('.day-section');
+const btns = document.querySelectorAll('.dnbtn');
+function showDay(n) {
+  sections.forEach((s,i) => s.classList.toggle('active', i===n));
+  btns.forEach((b,i) => b.classList.toggle('active', i===n));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
