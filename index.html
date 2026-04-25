@@ -2290,7 +2290,7 @@ footer{text-align:center;padding:1.4rem 1rem .5rem;font-size:.73rem;color:var(--
 <script>
 const sections = document.querySelectorAll('.day-section');
 const btns = document.querySelectorAll('.dnbtn');
-const daysNav = document.querySelector('.days-nav');
+const daysNav = document.querySelector('.day-nav');
 const main = document.querySelector('.main');
 let currentDay = 0;
 
@@ -2298,7 +2298,12 @@ function syncActiveNav() {
   btns.forEach((b, i) => b.classList.toggle('active', i === currentDay));
   const activeBtn = btns[currentDay];
   if (daysNav && activeBtn) {
-    activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    const navTarget = activeBtn.offsetLeft - (daysNav.clientWidth - activeBtn.offsetWidth) / 2;
+    const maxScroll = daysNav.scrollWidth - daysNav.clientWidth;
+    daysNav.scrollTo({
+      left: Math.max(0, Math.min(maxScroll, navTarget)),
+      behavior: 'smooth'
+    });
   }
 }
 
