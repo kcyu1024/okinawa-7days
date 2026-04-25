@@ -2290,7 +2290,6 @@ footer{text-align:center;padding:1.4rem 1rem .5rem;font-size:.73rem;color:var(--
 const sections = document.querySelectorAll('.day-section');
 const btns = document.querySelectorAll('.dnbtn');
 const daysNav = document.querySelector('.day-nav');
-const main = document.querySelector('.main');
 let currentDay = 0;
 
 function syncActiveNav() {
@@ -2311,36 +2310,6 @@ function showDay(n) {
   sections.forEach((s) => s.classList.toggle('active', s.id === `day-${currentDay}`));
   syncActiveNav();
   window.scrollTo({top:0,behavior:'smooth'});
-}
-
-let touchStartX = 0;
-let touchStartY = 0;
-
-if (main) {
-  main.addEventListener('touchstart', (event) => {
-    if (event.touches.length !== 1) return;
-    touchStartX = event.touches[0].clientX;
-    touchStartY = event.touches[0].clientY;
-  }, { passive: true });
-
-  main.addEventListener('touchend', (event) => {
-    if (event.changedTouches.length !== 1) return;
-    const target = event.target;
-    if (target.closest('a, button')) return;
-
-    const deltaX = event.changedTouches[0].clientX - touchStartX;
-    const deltaY = event.changedTouches[0].clientY - touchStartY;
-    const absX = Math.abs(deltaX);
-    const absY = Math.abs(deltaY);
-
-    if (absX < 60 || absX <= absY * 1.2) return;
-
-    if (deltaX < 0 && currentDay < btns.length - 1) {
-      showDay(currentDay + 1);
-    } else if (deltaX > 0 && currentDay > 0) {
-      showDay(currentDay - 1);
-    }
-  }, { passive: true });
 }
 
 syncActiveNav();
